@@ -29,6 +29,7 @@ export default function HomePage() {
     const [maxPercent, setMaxPercent] = useState<number | null>(null); // Added state for maximum percent
 
     const handleChange = (selectedItems: string[]) => {
+        // @ts-ignore
         setSelectedCategories([selectedItems]);
     };
 
