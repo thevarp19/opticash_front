@@ -11,8 +11,8 @@ interface DeleteButtonProps {
 export const DeleteButton: FC<DeleteButtonProps> = ({ onConfirm }) => {
     return (
         <Popconfirm
-            title="Delete this item"
-            description="Are you sure to delete this item?"
+            title="Удалить этот элемент"
+            description="Вы уверены, что хотите удалить этот элемент?"
             onConfirm={onConfirm}
         >
             <Button danger icon={<DeleteOutlined />}>

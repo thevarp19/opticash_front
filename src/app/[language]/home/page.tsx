@@ -29,7 +29,7 @@ export default function HomePage() {
     const [maxPercent, setMaxPercent] = useState<number | null>(null); // Added state for maximum percent
 
     const handleChange = (selectedItems: string[]) => {
-        setSelectedCategories(selectedItems);
+        setSelectedCategories([selectedItems]);
     };
 
     // const handleOrderChange = (value: string) => {
@@ -101,7 +101,6 @@ export default function HomePage() {
                     >
                         <div className="w-full sm:max-w-xs flex items-center ">
                             <Select
-                                mode="multiple"
                                 allowClear
                                 style={{ width: "100%" }}
                                 placeholder="Выберите категорию"
@@ -123,7 +122,7 @@ export default function HomePage() {
                         <Disclosure
                             as="section"
                             aria-labelledby="filter-heading"
-                            className="grid items-center border-b border-t border-gray-200"
+                            className="flex flex-col items-center border-b border-t border-gray-200 w-full"
                         >
                             <h2 id="filter-heading" className="sr-only">
                                 Filters
@@ -143,7 +142,7 @@ export default function HomePage() {
                             </div>
                             <Disclosure.Panel className="border-t border-gray-200 py-10">
                                 <div className="mx-auto flex max-w-7xl flex-col gap-x-4 px-4 text-sm sm:px-6 md:gap-x-6 lg:px-8">
-                                    <div className="grid auto-rows-min grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-6">
+                                    <div className="flex gap-4">
                                         <fieldset>
                                             <legend className="block font-medium">
                                                 <Select
@@ -195,9 +194,10 @@ export default function HomePage() {
                                             <div className="space-y-6 pt-6 sm:space-y-4 sm:pt-4"></div>
                                         </fieldset>
                                     </div>
+
                                     <fieldset>
                                         <legend className="block font-medium">
-                                            <div className="grid grid-cols-2 grid-template-areas gap-x-14 w-full">
+                                            <div className="flex w-full gap-4">
                                                 <input
                                                     className="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                                     type="number"

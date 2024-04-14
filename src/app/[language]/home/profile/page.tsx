@@ -32,7 +32,18 @@ export default function ProfilePage() {
     }
 
     return (
-        <div className="w-full h-full flex justify-center items-center pt-5 gap-5">
+        <div className="w-full h-full pb-40 flex flex-col justify-center items-center pt-5 gap-5">
+            <Link
+                href={getHref("/home/profile/create-card/")}
+                type="button"
+                className="mr-5 self-end inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+                <PlusIcon
+                    className="-ml-0.5 mr-1.5 h-5 w-5"
+                    aria-hidden="true"
+                />
+                Новая карта
+            </Link>
             <div className="h-full border-2 border-primary bg-gray-100 p-5 rounded-lg ">
                 <h2 className="text-primary text-3xl pb-5 font-bold">
                     Мои карты
@@ -56,18 +67,6 @@ export default function ProfilePage() {
                     ))}
                 </div>
             </div>
-
-            <Link
-                href={getHref("/home/profile/create-card/")}
-                type="button"
-                className="absolute right-0 top-0 mt-20 mr-5 inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-                <PlusIcon
-                    className="-ml-0.5 mr-1.5 h-5 w-5"
-                    aria-hidden="true"
-                />
-                Новая карта
-            </Link>
         </div>
     );
 }
