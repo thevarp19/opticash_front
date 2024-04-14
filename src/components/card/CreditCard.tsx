@@ -85,7 +85,7 @@ export const CreditCard = ({
                     </div>
                     <div className="text-right flex gap-1">
                         <span className="text-gray-700 text-sm uppercase">
-                            expires
+                            действие до
                         </span>
                         <div className="text-gray-700 text-sm">
                             {expirationDate}

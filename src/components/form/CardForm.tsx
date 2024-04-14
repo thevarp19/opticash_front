@@ -78,7 +78,7 @@ export const CardForm = () => {
                 {/* Payment */}
                 <form onSubmit={formik.handleSubmit} className="pt-10">
                     <h2 className="text-lg font-medium text-gray-900">
-                        Payment
+                        Платежные данные
                     </h2>
 
                     <fieldset className="mt-4">
@@ -86,7 +86,7 @@ export const CardForm = () => {
                             htmlFor="card"
                             className="block text-sm font-medium leading-6 text-gray-900"
                         >
-                            Select card
+                            Выберите карту
                         </label>
                         <select
                             onChange={(e) => setSelectedBank(e.target.value)}
@@ -108,7 +108,7 @@ export const CardForm = () => {
                                 htmlFor="card-type"
                                 className="block text-sm font-medium leading-6 text-gray-900"
                             >
-                                Select type of card
+                                Выберите тип карты
                             </label>
                             <select
                                 onChange={formik.handleChange}
@@ -132,7 +132,7 @@ export const CardForm = () => {
                                 htmlFor="card-number"
                                 className="block text-sm font-medium text-gray-700"
                             >
-                                Card number
+                                Номер карта
                             </label>
                             <div className="mt-1">
                                 <input
@@ -153,7 +153,7 @@ export const CardForm = () => {
                                 htmlFor="expiration-date"
                                 className="block text-sm font-medium text-gray-700"
                             >
-                                Expiration date (MM/YY)
+                                Срок действие (MM/YY)
                             </label>
                             <div className="mt-1">
                                 <input
@@ -174,7 +174,7 @@ export const CardForm = () => {
                                 type="submit"
                                 className="rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:order-last  sm:w-full"
                             >
-                                Add Card
+                                Добавить карту
                             </button>
                         </div>
                     </div>

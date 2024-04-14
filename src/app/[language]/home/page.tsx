@@ -182,10 +182,10 @@ export default function HomePage() {
                                                     }
                                                 >
                                                     <Option value="true">
-                                                        Yes
+                                                        Да
                                                     </Option>
                                                     <Option value="false">
-                                                        No
+                                                        Нет
                                                     </Option>
                                                 </Select>
                                                 <div className="grid grid-cols-2 grid-template-areas gap-x-14 w-full">
@@ -201,7 +201,7 @@ export default function HomePage() {
                                                 <input
                                                     className="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                                     type="number"
-                                                    placeholder="Min Percent"
+                                                    placeholder="Мин процент"
                                                     onChange={(e) =>
                                                         setMinPercent(
                                                             parseFloat(
@@ -213,7 +213,7 @@ export default function HomePage() {
                                                 <input
                                                     className="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                                     type="number"
-                                                    placeholder="Max Percent"
+                                                    placeholder="Макс процент"
                                                     onChange={(e) =>
                                                         setMaxPercent(
                                                             parseFloat(

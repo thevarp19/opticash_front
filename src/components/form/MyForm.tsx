@@ -67,7 +67,7 @@ const MyForm: React.FC = () => {
                     loading={mutation.isPending}
                     className={clsx("w-full")}
                 >
-                    Submit
+                    Отправить
                 </Button>
             </Form.Item>
         </Form>
