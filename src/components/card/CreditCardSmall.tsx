@@ -12,7 +12,7 @@ interface CardProps {
     isBest: boolean;
 }
 
-function getImageOfCard(name: string): string {
+export function getImageOfCard(name: string): string {
     if (name === "ForteBank") {
         return "/images/fortebank_logo.jpeg";
     }
@@ -27,6 +27,9 @@ function getImageOfCard(name: string): string {
     }
     if (name === "Freedom") {
         return "/images/freedom-logo.png";
+    }
+    if (name === "Home Credit Bank") {
+        return "/images/home-bank-logo.png";
     }
     return "https://d2vm05b1botqyl.cloudfront.net/images/p13_v3_wgc_nt/quiz/anxious/1.webp";
 }

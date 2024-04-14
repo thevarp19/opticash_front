@@ -1,5 +1,4 @@
 "use client";
-import { Loading } from "@/components/shared/Loading";
 import jwtService from "@/lib/jwt";
 import { isJwtExpired } from "@/lib/jwt/decode";
 import { UserProfile } from "@/types/auth";
@@ -64,7 +63,7 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
         handleLogin();
     }, []);
     if (!isAuth) {
-        return <Loading />;
+        return <></>;
     }
     return (
         <AuthContext.Provider value={{ isAuth, logout, setIsAuth }}>

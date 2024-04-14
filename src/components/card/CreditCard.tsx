@@ -1,6 +1,8 @@
 import { deleteCard } from "@/api/card";
 import { useMutation } from "@tanstack/react-query";
 import { App } from "antd";
+import Image from "next/image";
+import { getImageOfCard } from "./CreditCardSmall";
 
 export const CreditCard = ({
     cardId,
@@ -8,12 +10,14 @@ export const CreditCard = ({
     cardNumber,
     name,
     expirationDate,
+    bankName,
 }: {
     cardId: number;
     cardTitle: string;
     cardNumber: number;
     name: string;
     expirationDate: string;
+    bankName: string;
 }) => {
     function formatCreditCardNumber(num: number) {
         const digitsOnly = String(num).replace(/\D/g, "");
@@ -56,9 +60,12 @@ export const CreditCard = ({
                     </svg>
                 </span>{" "}
                 <div className="flex justify-start mb-6 w-72">
-                    <div className="bg-yellow-300 rounded-sm p-1">
-                        <div className="bg-white w-8 h-5 rounded-sm"></div>
-                    </div>
+                    <Image
+                        width={48}
+                        height={48}
+                        alt="logo"
+                        src={getImageOfCard(bankName)}
+                    />
                     <h2 className="px-2 truncate font-semibold text-gray-700">
                         {cardTitle}
                     </h2>
@@ -76,7 +83,7 @@ export const CreditCard = ({
                             {name}
                         </span>
                     </div>
-                    <div className="text-right">
+                    <div className="text-right flex gap-1">
                         <span className="text-gray-700 text-sm uppercase">
                             expires
                         </span>

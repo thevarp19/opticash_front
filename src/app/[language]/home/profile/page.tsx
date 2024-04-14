@@ -23,14 +23,21 @@ export default function ProfilePage() {
         retry: 2,
     });
 
+    if (isPending) {
+        return (
+            <div className="w-full h-[60vh] items-center flex justify-center">
+                <Spin size="large" />
+            </div>
+        );
+    }
+
     return (
         <div className="w-full h-full flex justify-center items-center pt-5 gap-5">
             <div className="h-full border-2 border-primary bg-gray-100 p-5 rounded-lg ">
                 <h2 className="text-primary text-3xl pb-5 font-bold">
-                    Мой карты
+                    Мои карты
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:min-w-[1064px] md:min-h-[472px]">
-                    {isPending && <Spin size="large" />}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:min-w-[1064px] md:min-h-[472px] w-full">
                     {cards && cards.length === 0 && (
                         <div className="col-span-3 text-center text-lg text-gray-700">
                             Карты не найдены.
@@ -40,6 +47,7 @@ export default function ProfilePage() {
                         <CreditCard
                             key={key}
                             cardId={card.id}
+                            bankName={card.bank_name || ""}
                             cardTitle={card.card_type_name}
                             cardNumber={card.number}
                             expirationDate={card.expired_date}
